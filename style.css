@@ -16,14 +16,14 @@ header, nav, main, footer {
 header, footer {
   text-align: center
 }
-header {
-
-}
+header {}
+nav {}
 nav > ul {
   display: flex;
   justify-content: space-around;
   list-style: none
 }
+nav > ul > li {}
 nav > ul > li > a {
   text-decoration: none;
   color: #000
@@ -31,3 +31,4 @@ nav > ul > li > a {
 main {
   flex: 1
 }
+footer {}
