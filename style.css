@@ -21,7 +21,7 @@ header > .logo {
   font-size: 5em
 }
 nav {
-  margin-bottom: 5vh;
+  margin-bottom: 5vh
 }
 nav > ul {
   display: flex;
@@ -32,12 +32,27 @@ nav > ul > li > a {
   text-decoration: none;
   color: #000;
   font-family: 'Cinzel', serif;
-  font-size: 2em;
+  font-size: 2em
 }
 main {
   flex: 1
 }
 main > .introduction {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.4em
+}
+main > .menu {
+  width: 90%;
+  margin: 0 auto
+}
+main > .menu > .tabs {
+  display: flex;
+  justify-content: space-around
+}
+footer > .copyright {
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+  vertical-align: middle 
 }
