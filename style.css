@@ -9,26 +9,35 @@ body {
 }
 header, nav, main, footer {
   max-width: 960px;
-  width: 100%;
+  width: 90vw;
   min-width: 320px;
   margin: 0 auto
 }
 header, footer {
   text-align: center
 }
-header {}
-nav {}
+header > .logo {
+  font-family: 'Cinzel', serif;
+  font-size: 5em
+}
+nav {
+  margin-bottom: 5vh;
+}
 nav > ul {
   display: flex;
   justify-content: space-around;
   list-style: none
 }
-nav > ul > li {}
 nav > ul > li > a {
   text-decoration: none;
-  color: #000
+  color: #000;
+  font-family: 'Cinzel', serif;
+  font-size: 2em;
 }
 main {
   flex: 1
 }
-footer {}
+main > .introduction {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+}
