@@ -48,7 +48,6 @@ header {
 nav {
   padding: 0;
   margin-bottom: 5vh;
-  background-image: linear-gradient(to left, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.1) 5%, rgba(0,0,0,0.1) 95%, rgba(0,0,0,0.0) 100%)
 }
 nav > ul {
   display: flex;
@@ -79,20 +78,45 @@ nav > ul > li > a.active {
 main {
   flex: 1
 }
+.index {
+  background: rgba(0,0,0,0.6);
+}
+.index > h2 {
+  padding: 2vw 0;
+  font-size: 2em;
+  text-align: center;
+  color: #fff
+}
 .introduction {
   font-size: 1.4em;
-  width: 90%;
-  margin: 0 auto
+  width: 85%;
+  margin: 10px auto;
+  text-align: center;
+  color: #fff
+}
+.index-bottom {
+  display: flex;
+  justify-content: space-around
+}
+.index-pizza {
+  width: 400px;
+  height: 300px;
+  margin: 5vw auto;
+  background: transparent url(assets/img/pierospizza.png) no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
 }
 .index-contact {
   width: 50%;
   margin: 5vw auto;
+  color: #fff;
   text-align: center
 }
 .index-contact > dt {
-  font-size: 2em
+  font-size: 1.8em
 }
 .index-contact > dd {
+  margin-bottom: 10px;
   font-size: 1.4em
 }
 .index-contact > dd > span {
@@ -148,6 +172,9 @@ main {
   font-size: 1.1em;
   border-bottom: 1px dashed rgba(255,255,255,0.3)
 }
+.content tr > td {
+  padding: 5px 0;
+}
 .content tr > td:first-child {
   width: 20%
 }
@@ -170,7 +197,7 @@ main {
 }
 
 /* fonts */
-.logo, nav > ul > li > a, .content caption {
+.logo, nav > ul > li > a, .content caption, .index > h2 {
   font-family: 'Cinzel', serif
 }
 .introduction, .tab, .copyright, .index-contact, .content thead, .content tbody {
