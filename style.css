@@ -78,6 +78,8 @@ nav > ul > li > a.active {
 main {
   flex: 1
 }
+
+/* index */
 .index {
   background: rgba(0,0,0,0.6);
 }
@@ -124,6 +126,8 @@ main {
 .index-contact > dd > span {
   display: block
 }
+
+/* menu */
 .menu {
   width: 90%;
   margin: 0 auto
@@ -152,12 +156,16 @@ main {
 .content {
   min-height: 150px;
   background: rgba(0,0,0,0.7);
-  color: #fff;
+  color: #fff
 }
-.content > div {
+.menu-content {
+  display: none;
   width: 90%;
   margin: 0 auto;
   padding-top: 2vw;
+}
+.menu-content.active {
+  display: block;
 }
 .content table {
   border-collapse: collapse;

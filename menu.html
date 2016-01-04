@@ -19,13 +19,13 @@
   <main>
     <div class="menu">
       <div id="tabs">
-        <div class="tab active" id="tab-pizza">Pizza</div>
-        <div class="tab" id="tab-burgers">Burgers</div>
-        <div class="tab" id="tab-salads">Salads</div>
-	      <div class="tab" id="tab-sides">Sides</div>
+        <div class="tab active" data-type="pizza">Pizza</div>
+        <div class="tab" data-type="burgers">Burgers</div>
+        <div class="tab" data-type="salads">Salads</div>
+	      <div class="tab" data-type="sides">Sides</div>
       </div>
       <div class="content">
-        <div class="menu-pizza active">
+        <div class="menu-content active" id="menu-pizza">
           <table>
             <caption>Pizza Varieties</caption>
             <thead>
@@ -165,9 +165,64 @@
             </tbody>
           </table>
         </div>
-        <div class="menu-burgers"></div>
-        <div class="menu-salads"></div>
-        <div class="menu-sides"></div>
+        <div class="menu-content" id="menu-burgers">
+          <table>
+            <caption>Burgers</caption>
+            <thead>
+              <tr>
+                <td>Burger</td>
+                <td>Price</td>
+                <td></td>
+                <td>Toppings</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hamburger</td>
+                <td>$2.95</td>
+                <td></td>
+                <td>A quarter pound of beef grilled to perfection.</td>
+              </tr>
+              <tr>
+                <td>Cheeseburger</td>
+                <td>$3.45</td>
+                <td></td>
+                <td>Our hamburger topped with American Cheese.</td>
+              </tr>
+              <tr>
+                <td>Bacon Cheeseburger</td>
+                <td>$3.75</td>
+                <td></td>
+                <td>Our juicy burger topped with lots of bacon and cheese.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="menu-content" id="menu-salads">
+          <table>
+            <caption>Salads</caption>
+            <thead>
+              <tr>
+                <td>Salad</td>
+                <td>Small</td>
+                <td>Large</td>
+                <td>Toppings</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tossed Salad</td>
+                <td>$3.75</td>
+                <td>$4.95</td>
+                <td>Freshly tossed greens with tomatoes, onions, and hot peppers.</td>
+              </tr>
+              <tr>
+                <td>Anti</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="menu-content" id="menu-sides"></div>
       </div>
     </div>
   </main>
@@ -181,12 +236,17 @@
         if(tabs.hasOwnProperty(t)) {
           tabs[t].addEventListener("click", function(){
             var active = document.getElementById('tabs').getElementsByClassName('active');
+            console.log(active);
+            var contents = document.getElementsByClassName('menu-content');
             for(a in active) {
               active[a].className = "tab";
             }
-            if ( this.className == "tab" ) {
-              this.className = this.className + ' active';
+            for(m in contents) {
+              contents[m].className = "menu-content";
             }
+            this.className = this.className + ' active';
+            var menu = document.getElementById('menu-'+this.dataset.type);
+            menu.className = menu.className + ' active';
           }, false);
         }
         else {
