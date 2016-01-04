@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">Piero's Pizza</div>
+    <div class="logo">Piero's <span>Pizza</span></div>
   </header>
   <nav>
     <ul>
@@ -19,7 +19,7 @@
   </nav>
   <main>
     <div class="menu">
-      <div class="tabs">
+      <div id="tabs">
         <div class="tab active" id="tab-pizza">Pizza</div>
         <div class="tab" id="tab-burgers">Burgers</div>
         <div class="tab" id="tab-salads">Salads</div>
@@ -36,5 +36,29 @@
   <footer>
     <p class="copyright">Copyright 2016. Piero's Pizza and Hoagies</p>
   </footer>
+  <script>
+    function tabs() {
+      var tabs = document.getElementById('tabs').getElementsByClassName('tab');
+      for(t in tabs) {
+        if(tabs.hasOwnProperty(t)) {
+          tabs[t].addEventListener("click", function(){
+            var active = document.getElementById('tabs').getElementsByClassName('active');
+            for(a in active) {
+              active[a].className = "tab";
+            }
+            if ( this.className == "tab" ) {
+              this.className = this.className + ' active';
+            }
+          }, false);
+        }
+        else {
+          if ( tabs[t].className == "tab active" ) {
+            tabs[t].className = "tab";
+          }
+        }
+      }
+    }
+    document.onload = tabs();
+  </script>
 </body>
 </html>
