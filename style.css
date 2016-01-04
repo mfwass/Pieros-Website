@@ -32,11 +32,12 @@ body {
 /* header block */
 header {
   height: 120px;
-  background-image: linear-gradient(to left, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.1) 5%, rgba(0,0,0,0.1) 95%, rgba(0,0,0,0.0) 100%)
+  background: rgba(0,0,0,0.6);
 }
 .logo {
   height: 10vw;
   text-align: center;
+  color: #fff;
   font-size: 5.5em;
   font-weight: 700
 }
@@ -47,7 +48,7 @@ header {
 /* nav block */
 nav {
   padding: 0;
-  margin-bottom: 5vh;
+  background: rgba(0,0,0,0.6)
 }
 nav > ul {
   display: flex;
@@ -58,7 +59,7 @@ nav > ul {
 }
 nav > ul > li > a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 2.8em;
   font-weight: 400
 }
@@ -203,11 +204,15 @@ main {
 }
 
 /* footer block */
+footer {
+  background: rgba(0,0,0,0.6)
+}
 .copyright {
   height: 5vh;
   line-height: 5vh;
   text-align: center;
   vertical-align: middle;
+  color: #fff;
   font-size: 1.2em
 }
 
