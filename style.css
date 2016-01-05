@@ -876,17 +876,17 @@ footer {
 */
 
 .gallery {
-  position: relative
+  position: relative;
 }
 
 .gallery .item {
   height: 400px;
   overflow: hidden;
-  text-align: center;
+  text-align: center
 }
 
 .gallery .item img {
-  border-radius: 5px;
+  border-radius: 5px
 }
 
 .gallery .controls {
