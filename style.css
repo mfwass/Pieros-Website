@@ -28,18 +28,23 @@ body {
 }
 @media screen and (max-width: 900px) {
   header, nav, main, footer {
-    width: 90vw;
+    width: 95vw;
     margin: 0 auto
   }
 }
 
 /* header block */
 header {
-  height: 120px;
+  height: 140px;
   background: rgba(0,0,0,0.6)
 }
+header > p {
+  color: #900;
+  text-align: center;
+  font-size: 1.5em
+}
 .logo {
-  height: 10vw;
+  height: 100px;
   text-align: center;
   color: #fff;
   font-size: 5.5em;
@@ -47,6 +52,17 @@ header {
 }
 .logo > span {
   color: rgba(0,169,57,1)
+}
+
+@media (max-width: 670px) {
+  header, .logo {
+    height: auto;
+  }
+}
+@media (max-width: 360px) {
+  .logo {
+    font-size: 4.5em
+  }
 }
 
 /* nav block */
@@ -76,6 +92,11 @@ nav > ul > li > a.active {
   nav > ul {
     flex-direction: column;
     align-items: center
+  }
+}
+@media (max-width: 360px) {
+  nav > ul > li > a {
+    font-size: 2em
   }
 }
 
@@ -142,8 +163,7 @@ main {
 }
 .tab {
   width: calc(25% - 2px);
-  max-height: 30px;
-  height: 5vw;
+  height: 32px;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   border-top: 1px solid #000;
@@ -156,6 +176,12 @@ main {
 }
 .tab.active {
   background: rgba(0,0,0,0.7)
+}
+@media (max-width: 400px) {
+  .tab {
+    width: auto;
+    flex-grow: 1
+  }
 }
 .content {
   min-height: 150px;
@@ -212,8 +238,8 @@ footer {
   background: rgba(0,0,0,0.6)
 }
 .copyright {
-  height: 5vh;
-  line-height: 5vh;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
   vertical-align: middle;
   color: #fff;
@@ -224,9 +250,11 @@ footer {
 .logo, nav > ul > li > a, #contact, .contact dt, .content caption, .index > h2, .gallery .item h2 {
   font-family: 'Cinzel', serif
 }
-.introduction, .tab, .copyright, .contact dd, .content thead, .content tbody {
+header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .content tbody {
   font-family: 'Roboto', sans-serif
 }
+
+/* Gallery */
 .gallery .control-operator:target ~ .controls .control-button {
   color: #ccc;
   color: rgba(255, 255, 255, 0.4)
@@ -897,6 +925,16 @@ footer {
 
 .gallery .item img {
   border-radius: 5px
+}
+
+@media (max-width: 720px) {
+  .gallery .item img {
+    width: 95%;
+    height: auto;
+  }
+  .gallery .item {
+    height: 58vw;
+  }
 }
 
 .gallery .controls {
