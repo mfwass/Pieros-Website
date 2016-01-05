@@ -39,7 +39,7 @@ header {
   background: rgba(0,0,0,0.6)
 }
 header > p {
-  color: #900;
+  color: #fff;
   text-align: center;
   font-size: 1.5em
 }
@@ -48,7 +48,9 @@ header > p {
   text-align: center;
   color: #fff;
   font-size: 5.5em;
-  font-weight: 700
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  font-weight: 700;
+  cursor: default
 }
 .logo > span {
   color: rgba(0,169,57,1)
@@ -79,13 +81,19 @@ nav > ul {
 }
 nav > ul > li > a {
   text-decoration: none;
-  color: #fff;
+  color: rgba(255,255,255,0.9);;
   font-size: 2.8em;
-  font-weight: 400
+  font-weight: 400;
+  transition: all 250ms
 }
 nav > ul > li > a.active {
   color: #D20606;
   text-shadow: 1px 1px 1px #000
+}
+nav > ul > li > a:not(.active):hover {
+  color: rgba(0,169,57,1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+  transition: all 400ms
 }
 
 @media screen and (max-width: 900px) {
@@ -111,7 +119,7 @@ main {
   background: rgba(0,0,0,0.6);
 }
 .index h2 {
-  padding: 0 0 2vw;
+  padding: 0 0 10px;
   font-size: 2em;
   text-align: center;
   color: #fff
@@ -172,10 +180,15 @@ main {
   font-size: 1.6em;
   text-align: center;
   color: #fff;
+  transition: all 400ms;
   cursor: pointer
 }
 .tab.active {
   background: rgba(0,0,0,0.7)
+}
+.tab:not(.active):hover {
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  transition: all 250ms
 }
 @media (max-width: 400px) {
   .tab {
@@ -243,6 +256,7 @@ footer {
   text-align: center;
   vertical-align: middle;
   color: #fff;
+  padding: 5px 0;
   font-size: 1.2em
 }
 
