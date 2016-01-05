@@ -98,21 +98,10 @@ main {
 .index-pizza {
   width: 400px;
   height: 300px;
-  margin: 5vw auto;
+  margin: 3vw auto;
   background: transparent url(assets/img/pierospizza.png) no-repeat;
   background-size: 100% 100%;
   vertical-align: middle
-}
-.index-bottom {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5vw;
-  border-top: 1px dashed rgba(255,255,255,0.4)
-}
-.index-bottom > span {
-  width: 46%;
-  margin: 5vw auto;
-  padding: 0 2%
 }
 .introduction {
   font-size: 1.4em;
@@ -121,20 +110,17 @@ main {
   color: #fff
 }
 
-.index-contact {
-  width: 50%;
-  margin: 5vw auto;
+/* contact */
+.contact > dt {
   color: #fff;
-  text-align: center
-}
-.index-contact > dt {
   font-size: 1.8em
 }
-.index-contact > dd {
+.contact > dd {
+  color: #fff;
   margin-bottom: 10px;
   font-size: 1.4em
 }
-.index-contact > dd > span {
+.contact > dd > span {
   display: block
 }
 
@@ -213,7 +199,6 @@ main {
 
 /* footer block */
 footer {
-  border-top: 1px dashed rgba(255,255,255,0.4);
   background: rgba(0,0,0,0.6)
 }
 .copyright {
