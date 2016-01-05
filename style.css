@@ -885,6 +885,10 @@ footer {
   text-align: center;
 }
 
+.gallery .item img {
+  border-radius: 5px;
+}
+
 .gallery .controls {
   position: absolute;
   bottom: 0;
