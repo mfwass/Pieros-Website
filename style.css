@@ -81,7 +81,8 @@ nav > ul > li > a.active {
 
 /* main block */
 main {
-  flex: 1
+  flex: 1;
+  margin: 15px auto;
 }
 
 /* index */
@@ -140,7 +141,7 @@ main {
 /* menu */
 .menu {
   width: 100%;
-  margin: 20px auto 0
+  margin: 0 auto
 }
 #tabs {
   display: flex;
@@ -180,6 +181,9 @@ main {
 .content table {
   border-collapse: collapse;
   margin-bottom: 2vw
+}
+.content table:last-child tr:last-child {
+  border-bottom: 0;
 }
 .content caption {
   font-size: 1.5em
