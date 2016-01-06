@@ -57,7 +57,9 @@ header > p {
   text-align: center;
   color: #fff;
   font-size: 5.5em;
-  font-weight: 700
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  font-weight: 700;
+  cursor: default
 }
 .logo > span {
   color: rgba(0,169,57,1)
@@ -95,13 +97,19 @@ nav > ul {
 }
 nav > ul > li > a {
   text-decoration: none;
-  color: #fff;
+  color: rgba(255,255,255,0.9);;
   font-size: 2.8em;
-  font-weight: 400
+  font-weight: 400;
+  transition: all 250ms
 }
 nav > ul > li > a.active {
   color: #D20606;
   text-shadow: 1px 1px 1px #000
+}
+nav > ul > li > a:not(.active):hover {
+  color: rgba(0,169,57,1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+  transition: all 400ms
 }
 
 @media screen and (max-width: 900px) {
@@ -127,7 +135,7 @@ main {
   background: rgba(0,0,0,0.6);
 }
 .index h2 {
-  padding: 0 0 2vw;
+  padding: 0 0 10px;
   font-size: 2em;
   text-align: center;
   color: #fff
@@ -188,10 +196,15 @@ main {
   font-size: 1.6em;
   text-align: center;
   color: #fff;
+  transition: all 400ms;
   cursor: pointer
 }
 .tab.active {
   background: rgba(0,0,0,0.7)
+}
+.tab:not(.active):hover {
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  transition: all 250ms
 }
 @media (max-width: 400px) {
   .tab {
@@ -259,6 +272,7 @@ footer {
   text-align: center;
   vertical-align: middle;
   color: #fff;
+  padding: 5px 0;
   font-size: 1.2em
 }
 
@@ -300,8 +314,6 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
   height: 100%;
   pointer-events: none;
   opacity: 0;
-  -webkit-transition: opacity .5s;
-  -o-transition: opacity .5s;
   transition: opacity .5s
 }
 
@@ -312,49 +324,11 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
 .gallery .control-operator:target ~ .item {
   pointer-events: none;
   opacity: 0;
-  -webkit-animation: none;
-  -o-animation: none;
   animation: none
 }
 
 .gallery .control-operator:target ~ .controls .control-button {
-  -webkit-animation: none;
-  -o-animation: none;
   animation: none
-}
-
-@-webkit-keyframes controlAnimation-2 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  14.3%, 50% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  64.3%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-o-keyframes controlAnimation-2 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  14.3%, 50% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  64.3%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
 }
 
 @keyframes controlAnimation-2 {
@@ -371,34 +345,6 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
   64.3%, 100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-webkit-keyframes galleryAnimation-2 {
-  0% {
-    opacity: 0
-  }
-
-  14.3%, 50% {
-    opacity: 1
-  }
-
-  64.3%, 100% {
-    opacity: 0
-  }
-}
-
-@-o-keyframes galleryAnimation-2 {
-  0% {
-    opacity: 0
-  }
-
-  14.3%, 50% {
-    opacity: 1
-  }
-
-  64.3%, 100% {
-    opacity: 0
   }
 }
 
@@ -427,63 +373,21 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
 }
 
 .items-2.autoplay .control-button {
-  -webkit-animation: controlAnimation-2 14s infinite;
-  -o-animation: controlAnimation-2 14s infinite;
   animation: controlAnimation-2 14s infinite
 }
 
 .items-2.autoplay .item {
-  -webkit-animation: galleryAnimation-2 14s infinite;
-  -o-animation: galleryAnimation-2 14s infinite;
   animation: galleryAnimation-2 14s infinite
 }
 
 .items-2 .control-button:nth-of-type(1),
 .items-2 .item:nth-of-type(1) {
-  -webkit-animation-delay: -2s;
-  -o-animation-delay: -2s;
   animation-delay: -2s
 }
 
 .items-2 .control-button:nth-of-type(2),
 .items-2 .item:nth-of-type(2) {
-  -webkit-animation-delay: 5s;
-  -o-animation-delay: 5s;
   animation-delay: 5s
-}
-
-@-webkit-keyframes controlAnimation-3 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  9.5%, 33.3% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  42.9%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-o-keyframes controlAnimation-3 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  9.5%, 33.3% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  42.9%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
 }
 
 @keyframes controlAnimation-3 {
@@ -500,34 +404,6 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
   42.9%, 100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-webkit-keyframes galleryAnimation-3 {
-  0% {
-    opacity: 0
-  }
-
-  9.5%, 33.3% {
-    opacity: 1
-  }
-
-  42.9%, 100% {
-    opacity: 0
-  }
-}
-
-@-o-keyframes galleryAnimation-3 {
-  0% {
-    opacity: 0
-  }
-
-  9.5%, 33.3% {
-    opacity: 1
-  }
-
-  42.9%, 100% {
-    opacity: 0
   }
 }
 
@@ -561,70 +437,26 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
 }
 
 .items-3.autoplay .control-button {
-  -webkit-animation: controlAnimation-3 21s infinite;
-  -o-animation: controlAnimation-3 21s infinite;
   animation: controlAnimation-3 21s infinite
 }
 
 .items-3.autoplay .item {
-  -webkit-animation: galleryAnimation-3 21s infinite;
-  -o-animation: galleryAnimation-3 21s infinite;
   animation: galleryAnimation-3 21s infinite
 }
 
 .items-3 .control-button:nth-of-type(1),
 .items-3 .item:nth-of-type(1) {
-  -webkit-animation-delay: -2s;
-  -o-animation-delay: -2s;
   animation-delay: -2s
 }
 
 .items-3 .control-button:nth-of-type(2),
 .items-3 .item:nth-of-type(2) {
-  -webkit-animation-delay: 5s;
-  -o-animation-delay: 5s;
   animation-delay: 5s
 }
 
 .items-3 .control-button:nth-of-type(3),
 .items-3 .item:nth-of-type(3) {
-  -webkit-animation-delay: 12s;
-  -o-animation-delay: 12s;
   animation-delay: 12s
-}
-
-@-webkit-keyframes controlAnimation-4 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  7.1%, 25% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  32.1%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-o-keyframes controlAnimation-4 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  7.1%, 25% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  32.1%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
 }
 
 @keyframes controlAnimation-4 {
@@ -641,34 +473,6 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
   32.1%, 100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-webkit-keyframes galleryAnimation-4 {
-  0% {
-    opacity: 0
-  }
-
-  7.1%, 25% {
-    opacity: 1
-  }
-
-  32.1%, 100% {
-    opacity: 0
-  }
-}
-
-@-o-keyframes galleryAnimation-4 {
-  0% {
-    opacity: 0
-  }
-
-  7.1%, 25% {
-    opacity: 1
-  }
-
-  32.1%, 100% {
-    opacity: 0
   }
 }
 
@@ -707,77 +511,31 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
 }
 
 .items-4.autoplay .control-button {
-  -webkit-animation: controlAnimation-4 28s infinite;
-  -o-animation: controlAnimation-4 28s infinite;
   animation: controlAnimation-4 28s infinite
 }
 
 .items-4.autoplay .item {
-  -webkit-animation: galleryAnimation-4 28s infinite;
-  -o-animation: galleryAnimation-4 28s infinite;
   animation: galleryAnimation-4 28s infinite
 }
 
 .items-4 .control-button:nth-of-type(1),
 .items-4 .item:nth-of-type(1) {
-  -webkit-animation-delay: -2s;
-  -o-animation-delay: -2s;
   animation-delay: -2s
 }
 
 .items-4 .control-button:nth-of-type(2),
 .items-4 .item:nth-of-type(2) {
-  -webkit-animation-delay: 5s;
-  -o-animation-delay: 5s;
   animation-delay: 5s
 }
 
 .items-4 .control-button:nth-of-type(3),
 .items-4 .item:nth-of-type(3) {
-  -webkit-animation-delay: 12s;
-  -o-animation-delay: 12s;
   animation-delay: 12s
 }
 
 .items-4 .control-button:nth-of-type(4),
 .items-4 .item:nth-of-type(4) {
-  -webkit-animation-delay: 19s;
-  -o-animation-delay: 19s;
   animation-delay: 19s
-}
-
-@-webkit-keyframes controlAnimation-5 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  5.7%, 20% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  25.7%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-o-keyframes controlAnimation-5 {
-  0% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
-
-  5.7%, 20% {
-    color: white;
-    color: rgba(255, 255, 255, 0.8)
-  }
-
-  25.7%, 100% {
-    color: #ccc;
-    color: rgba(255, 255, 255, 0.4)
-  }
 }
 
 @keyframes controlAnimation-5 {
@@ -794,34 +552,6 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
   25.7%, 100% {
     color: #ccc;
     color: rgba(255, 255, 255, 0.4)
-  }
-}
-
-@-webkit-keyframes galleryAnimation-5 {
-  0% {
-    opacity: 0
-  }
-
-  5.7%, 20% {
-    opacity: 1
-  }
-
-  25.7%, 100% {
-    opacity: 0
-  }
-}
-
-@-o-keyframes galleryAnimation-5 {
-  0% {
-    opacity: 0
-  }
-
-  5.7%, 20% {
-    opacity: 1
-  }
-
-  25.7%, 100% {
-    opacity: 0
   }
 }
 
@@ -865,49 +595,35 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
 }
 
 .items-5.autoplay .control-button {
-  -webkit-animation: controlAnimation-5 35s infinite;
-  -o-animation: controlAnimation-5 35s infinite;
   animation: controlAnimation-5 35s infinite
 }
 
 .items-5.autoplay .item {
-  -webkit-animation: galleryAnimation-5 35s infinite;
-  -o-animation: galleryAnimation-5 35s infinite;
   animation: galleryAnimation-5 35s infinite
 }
 
 .items-5 .control-button:nth-of-type(1),
 .items-5 .item:nth-of-type(1) {
-  -webkit-animation-delay: -2s;
-  -o-animation-delay: -2s;
   animation-delay: -2s
 }
 
 .items-5 .control-button:nth-of-type(2),
 .items-5 .item:nth-of-type(2) {
-  -webkit-animation-delay: 5s;
-  -o-animation-delay: 5s;
   animation-delay: 5s
 }
 
 .items-5 .control-button:nth-of-type(3),
 .items-5 .item:nth-of-type(3) {
-  -webkit-animation-delay: 12s;
-  -o-animation-delay: 12s;
   animation-delay: 12s
 }
 
 .items-5 .control-button:nth-of-type(4),
 .items-5 .item:nth-of-type(4) {
-  -webkit-animation-delay: 19s;
-  -o-animation-delay: 19s;
   animation-delay: 19s
 }
 
 .items-5 .control-button:nth-of-type(5),
 .items-5 .item:nth-of-type(5) {
-  -webkit-animation-delay: 26s;
-  -o-animation-delay: 26s;
   animation-delay: 26s
 }
 
@@ -966,7 +682,5 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
   font-size: 3em;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: color .1s;
-  -o-transition: color .1s;
   transition: color .1s
 }
