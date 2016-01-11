@@ -36,19 +36,10 @@ body {
 /* header block */
 header {
   display: flex;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   height: 140px;
   background: rgba(0,0,0,0.6)
-}
-header > p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-around;
-  color: #900;
-  text-align: center;
-  font-size: 1.5em
 }
 .logo {
   height: 140px;
@@ -63,6 +54,11 @@ header > p {
 }
 .logo > span {
   color: rgba(0,169,57,1)
+}
+header > img {
+  width: 100px;
+  height: 100px;
+  margin-left: 40px
 }
 
 @media (max-width: 670px) {
