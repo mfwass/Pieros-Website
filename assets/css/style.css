@@ -132,7 +132,7 @@ main {
 }
 .index h2 {
   padding: 0 0 10px;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
   color: #fff
 }
@@ -153,9 +153,6 @@ main {
 }
 
 /* contact */
-#contact {
-  font-size: 2.5em
-}
 .contact {
   text-align: center
 }
@@ -173,9 +170,6 @@ main {
 }
 
 /* about us */
-#about-us {
-  font-size: 2.6em
-}
 .about-us p {
   padding: 0 0 10px;
   font-size: 1.5em;
