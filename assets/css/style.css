@@ -177,8 +177,8 @@ main {
   color: #fff
 }
 .about-us img {
-  margin: 0 auto;
-  display: block
+  margin: 0 auto 10px;
+  display: block;
 }
 
 /* menu */
