@@ -214,8 +214,10 @@ main {
 @media (max-width: 400px) {
   .tab {
     width: auto;
-    flex-grow: 1
+    flex-grow: 1;
+    font-size: 1.4em
   }
+
 }
 .content {
   min-height: 150px;
@@ -255,6 +257,14 @@ main {
 .content tr > td {
   padding: 5px 0
 }
+@media (max-width: 400px) {
+  .content thead {
+    font-size: 1.2em
+  }
+  .content tr > td {
+    font-size: 1em
+  }
+}
 .content tr > td:first-child {
   width: 20%
 }
@@ -279,6 +289,11 @@ footer {
   color: #fff;
   padding: 5px 0;
   font-size: 1.2em
+}
+@media (max-width: 400px) {
+  .copyright {
+    font-size: 0.8em
+  }
 }
 
 /* fonts */
