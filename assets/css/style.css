@@ -172,6 +172,21 @@ main {
   display: block
 }
 
+/* about us */
+#about-us {
+  font-size: 2.6em
+}
+.about-us p {
+  padding: 0 0 10px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff
+}
+.about-us img {
+  margin: 0 auto;
+  display: block
+}
+
 /* menu */
 .menu {
   width: 100%;
