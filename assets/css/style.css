@@ -127,11 +127,14 @@ main {
 }
 
 /* index */
+figure.item img {
+  margin-top: 15px;
+}
 .index {
   background: rgba(0,0,0,0.6);
 }
 .index h2 {
-  padding: 0 0 10px;
+  padding: 10px 0 10px;
   font-size: 2.5em;
   text-align: center;
   color: #fff
@@ -666,7 +669,7 @@ header > p, .introduction, .tab, .copyright, .contact dd, .content thead, .conte
 }
 
 .gallery .item {
-  height: 400px;
+  max-height: 400px;
   overflow: hidden;
   text-align: center
 }
